@@ -5,8 +5,8 @@ let User = require('../models/user.model')
 // what to do at route 'users/'
 router.route('/').get((req, res) => {
     User.find()
-    .then(users => res.json(users))
-    .catch(err => res.status(400).json('Error: ' + err))
+        .then(users => res.json(users))
+        .catch(err => res.status(400).json('Error: ' + err))
 })
 
 // what to do at route 'users/add'
