@@ -7,7 +7,7 @@ const ExerciseList = props => {
     const [exercises, setExercises] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/exercises/')
+        axios.get('https://peaceful-sierra-22562.herokuapp.com/exercises/')
             .then(res => {
                 setExercises(res.data)
             })
@@ -17,7 +17,7 @@ const ExerciseList = props => {
     }, [])
 
     const deleteExercise = id => {
-        axios.delete('http://localhost:5000/exercises/' + id)
+        axios.delete('https://peaceful-sierra-22562.herokuapp.com/exercises/' + id)
             .then(res => console.log(res.data))
             setExercises(exercises.filter(item => item._id !== id))
     }
