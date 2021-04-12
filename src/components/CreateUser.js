@@ -17,7 +17,7 @@ const CreateUser = props => {
 
         console.log(user)
 
-        axios.post('https://peaceful-sierra-22562.herokuapp.com/users/add', user)
+        axios.post('http://localhost:5000/users/add', user)
             .then(res => console.log(res.data))
 
         setUsername('')

@@ -14,7 +14,7 @@ const EditExercise = props => {
     const urlId = useParams().id
 
     useEffect(() => {
-        axios.get('https://peaceful-sierra-22562.herokuapp.com/exercises/' + urlId)
+        axios.get('http://localhost:5000/exercises/' + urlId)
             .then(res => {
                 setUsername(res.data.username)
                 setDescription(res.data.description)
@@ -24,7 +24,7 @@ const EditExercise = props => {
             .catch(err => {
                 console.log(err)
             })
-        axios.get('https://peaceful-sierra-22562.herokuapp.com/users/')
+        axios.get('http://localhost:5000/users/')
             .then(res => {
                 if(res.data.length > 0) {
                     setUsers(res.data.map(user => user.username))
@@ -59,7 +59,7 @@ const EditExercise = props => {
             date: date
         }
 
-        axios.post('https://peaceful-sierra-22562.herokuapp.com/exercises/update/' + urlId, exercise)
+        axios.post('http://localhost:5000/exercises/update/' + urlId, exercise)
             .then(res => console.log(res.data))
 
         window.location = '/'

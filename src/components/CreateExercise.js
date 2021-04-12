@@ -11,7 +11,7 @@ const CreateExercise = props => {
     const [users, setUsers] = useState([])
 
     useEffect(() => {
-        axios.get('https://peaceful-sierra-22562.herokuapp.com/users/')
+        axios.get('http://localhost:5000/users/')
             .then(res => {
                 if(res.data.length > 0) {
                     setUsers(res.data.map(user => user.username))
@@ -49,7 +49,7 @@ const CreateExercise = props => {
 
         console.log(exercise)
 
-        axios.post('https://peaceful-sierra-22562.herokuapp.com/exercises/add', exercise)
+        axios.post('http://localhost:5000/exercises/add', exercise)
             .then(res => console.log(res.data))
 
         window.location = '/'
