@@ -28,5 +28,5 @@ app.use('/exercises', exerciseRouter)
 app.use('/users', usersRouter)
 
 app.listen(port, () => {
-    console.log(`Server is up and running on port: ${port}. Awesome!!!`)
+    console.log(`Heroku Port is ${process.env.PORT}. Server is up and running on port: ${port}.`)
 })

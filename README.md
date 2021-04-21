@@ -1,5 +1,4 @@
 # FitLog
-View live demo [here](https://peaceful-sierra-22562.herokuapp.com/)
 
 - FitLog is an exercise tracker where you can keep track of your exercises in a log.
 - Users can Create, Edit, and Delete exercises.
@@ -31,6 +30,3 @@ View live demo [here](https://peaceful-sierra-22562.herokuapp.com/)
 - [Mongoose](https://mongoosejs.com/)
 
 - [Cors](https://www.npmjs.com/package/cors)
-
-## Deployment
-I chose to deploy my project through [Heroku](https://www.heroku.com/)
